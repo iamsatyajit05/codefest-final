@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Water+Brush&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #39395f;
+}
+
+.navbar {
+    background-color: #39395f;
+    color: #f5eec2;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar ul {
+    transition: 1s;
+}
+
+.navbar ul a {
+    color: #f5eec2;
+    text-decoration: none;
+    font-size: 28px;
+    margin: 0 12px;
+    transition: .5s;
+}
+
+.navbar ul a:hover {
+    text-shadow: 0px 0px 5px #f5eec2;
+}
+
+#check,
+label {
+    display: none;
+    transition: 1s;
+}
+
+.hero{
+    height: 800px;
+    width: 100vw;
+    position: relative;
+}
+
+.hero-slide{
+    position: absolute;
+}
+
+.slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    font-size: 78px;
+    color: #f5eec2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide p {
+    font-weight: 900;
+    text-shadow: 1px 1px 10px #39395f;
+    text-align: center;
+}
+
+#slide1{
+    background-image: url(img/slider1.jpg);
+}
+#slide2{
+    background-image: url(img/slider2.jpg);
+}
+#slide3{
+    background-image: url(img/slider3.jpg);
+}
+#slide4{
+    background-image: url(img/slider4.jpg);
+}
+
+.moveIcon{
+    position: absolute;
+    top: 350px;
+    z-index: 9;
+    color:#39395f;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.moveIcon div{
+    background-color: rgba(245, 238, 194, 0.45);
+    font-size: 96px;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 24px;
+    transition: .5s;
+}
+.moveIcon div:hover{
+    background-color: rgba(245, 238, 194, 1);
+}
+
+.mission,
+.tripPlans, .testinomials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:is(.mission, .tripPlans, .testinomials, .contactUs) h2 {
+    font-size: 64px;
+    margin: 40px 0;
+    color: #f5eec2;
+    text-align: center;
+}
+
+.mission ul li {
+    font-size: 36px;
+    text-align: left;
+    width: 50vw;
+    margin: 12px 0;
+    color: #f5eec2;
+    list-style: none;
+}
+.mission ul li img{
+    margin-right: 8px;
+}
+
+.trip-option, .testi-option {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.tripPlans .trip-option>div {
+    width: 400px;
+    margin:20px;
+    background: #f5eec2;
+    color:#39395f;
+    border-radius: 8px;
+    transition: .7s;
+}
+
+.trip-option > div:hover {
+    transform: scale(1.05);
+}
+
+.tripPlans .trip-option img {
+    width: 400px;
+    height: 250px;
+    border-radius: 8px 8px 0 0;
+}
+
+.tripPlans .triptext {
+    padding: 12px;
+}
+
+.tripPlans .triptext p:first-child {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.tripPlans .triptext .aboutTrip {
+    font-size: 28px;
+}
+
+.tripPlans .triptext button {
+    outline: 0;
+    border: 1px solid #39395f;
+    background: #f5eec2;
+    font-size: 28px;
+    margin-top: 12px;
+    padding: 6px 12px;
+    transition: .5s;
+    cursor: pointer;
+    width: 100%;
+}
+.tripPlans .triptext button:hover, .triptext button:focus {
+    box-shadow: 0px 0px 20px rgba(57, 57, 95, 0.5);
+}
+
+.testinomials .testi-option > a{
+    margin:20px;
+    background: #f5eec2;
+    color:#39395f;
+    border-radius: 8px;
+    transition: .7s;   
+    padding: 24px; 
+    text-decoration: none;
+    width: 400px
+}
+
+.testinomials .testi-option div{
+    width: 400px
+}
+.testinomials .testi-option > a:hover{
+    width: 450px;
+}
+
+.tripPlans .triptext {
+    padding: 12px;
+}
+
+.testi-option div p:first-child {
+    font-size: 34px;
+}
+.testi-option div p:first-child span{
+    display: inline;
+    font-size: 1020px;
+}
+.testi-option div p:last-child {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.contactUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contactUs >div {
+    width: 690px;
+}
+
+.digital, .social, .physical{
+    background-color: #f5eec2;
+    width: max-content;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 18px 0;
+}
+.physical {
+    text-decoration: none;
+    color: #39395f;
+    transition: 0.5s;
+}
+.physical div{
+    font-size: 36px;
+    height: 50px;
+    margin: 18px 0;
+    width: 100%;
+    text-align: center;
+}
+.digital div{
+    font-size: 42px;
+    height: 50px;
+    margin: 18px 0;
+}
+
+.physical div a, .digital div a{
+    text-decoration: none;
+    color: #39395f;
+    transition: 0.5s;
+}
+.physical div a:hover, .digital div a:hover{
+    text-shadow: 0px 0px 3px #39395f;
+}
+.physical div a:focus, .digital div a:focus{
+    text-shadow: 0px 0px 3px #39395f;
+}
+
+:is(.digital, .social, .physical) h2{
+    font-size: 48px;
+    margin: 9px;
+    color: #39395f;
+    text-align: center;
+}
+
+.digital img, .social img{
+    border-radius: 50%;
+    margin: 0 16px;
+    transition: 1s;
+}
+
+.social img:hover{
+    box-shadow: 0px 0px 24px rgba(57, 57, 95, 0.75);
+}
+.social img:focus{
+    box-shadow: 0px 0px 24px rgba(57, 57, 95, 0.75);
+}
+
+.social div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer{
+    margin-top: 12px;
+    padding: 12px 0;
+    background-color: #f5eec2;
+    color: #39395f;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+}
+
+@media (max-width: 768px) {
+    label {
+        display: block;
+        font-size: 124px;
+        line-height: 50px;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .navbar ul {
+        top: 0;
+        left: 0;
+        position: absolute;
+        margin-top: 124px;
+        background-color: #39395f;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar ul a {
+        text-align: center;
+        padding-bottom: 16px;
+    }
+
+    input:not(:checked)~ul a {
+        display: none;
+    }
+
+    input:not(:checked)~ul {
+        height: 0;
+    }
+    input:checked~label {
+        transform: rotate(45deg);
+    }
+
+    input:checked~ul {
+        height: 250px;
+    }
+
+    .mission ul li {
+        width: 80vw;
+    }
+
+    .trip-option > div:hover {
+        transform: scale(1);
+    }
+    .testinomials .testi-option > a:hover{
+        width: 400px;
+    }
+
+    .moveIcon{
+        display: none;
+    }
+
+    .contactUs >div {
+        width: 425px;
+    }
+
+    .digital img, .social img{
+        margin: 0 8px;
+        height: 50px;
+    }
+
+    .physical div{
+        font-size: 32px;
+        height: 50px;
+        margin: 9px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .digital div{
+        font-size: 28px;
+        height: 40px;
+        margin: 5px 0;
+        text-align: center;
+    }
+    .digital div img{
+        display: none;
+    }
+    :is(.mission, .tripPlans, .testinomials, .contactUs) h2 {
+        font-size: 58px;
+        margin: 40px 0;
+    }
+    :is(.digital, .social, .physical) h2{
+        margin: 4px;
+    }
+    .mission ul li {
+        font-size: 28px;
+        margin: 24px 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .digital, .social, .physical{
+        width: 400px;
+    }
+}

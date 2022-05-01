@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mahendra Super Dhoni</title>
+</head>
+
+<body>
+    <div>
+        <div id="homeID" class="home">
+            <div class="text">
+                <p><span class="cursive">M</span> ahendra</p>
+                <p><span class="cursive">S</span> ingh</p>
+                <p><span class="cursive">D</span> honi</p>
+                <p class="aboutme">He(born 7 July 1981) is an Indian professional cricketer. He is a right-handed wicket-keeper batsman  He is considered as one of the greatest Captains and Wicket Keeper–Batsmen of all
+                    time.He has won several awards and accolades throughout his career.</p>
+            </div>
+            <div class="img"></div>
+        </div>
+    
+        <div id="aboutID" class="aboutme-main">
+            <h2><span class="cursive">About</span> Me</h2>
+            <div class="abouttext">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa rem ratione illo sit officiis
+                    atque libero provident inventore maiores!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa rem ratione illo sit officiis
+                    atque libero provident inventore maiores!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa rem ratione illo sit officiis
+                    atque libero provident inventore maiores!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa rem ratione illo sit officiis
+                    atque libero provident inventore maiores!</p>
+            </div>
+        </div>
+    
+        <div id="trophyID" class="trophy">
+            <h2><span class="cursive">Real</span> Champion</h2>
+            <div class="champtext">
+                <div>
+                    <p>World Cup: 2011</p>
+                    <p>T20 Cup: 2007</p>
+                    <p>Champions Trophy: 2013</p>
+                    <p>Aisa Cup: 2010 and 2016</p>
+                    <p>IPL: 2010, 2011, 2018 and the 2021</p>
+                </div>
+                <div>
+                    <p>Padma Bhushan: 2018</p>
+                    <p>Padma Shri: 2009</p>
+                    <p>Champions Trophy: 2013</p>
+                    <p>Major Dhyanchand Khel Ratna award: 2007</p>
+                    <p>IPL: 2010, 2011, 2018 and the 2021</p>
+    
+                </div>
+            </div>
+        </div>
+        <div id="statsID" class="stats">
+            <h2><span class="cursive">My</span>Stats</h2>
+            <div class="statstext">
+                <div>
+                    <h3>Test</h3>
+                    <p>Matches: 90</p>
+                    <p>Run: 4876</p>
+                    <p>Top Score: 224</p>
+                    <p>Average: 38.09</p>
+                </div>
+                <div>
+                    <h3>One Day</h3>
+                    <p>Matches: 350</p>
+                    <p>Run: 10773</p>
+                    <p>Top Score: 183*</p>
+                    <p>Average: 38.09</p>   
+                </div>
+                <div>
+                    <h3>T20</h3>
+                    <p>Matches: 98</p>
+                    <p>Run: 1607</p>
+                    <p>Top Score: 56</p>
+                    <p>Average: 38.09</p>
+                </div>
+                <div>
+            </div>
+        </div>
+    </div>
+
+      <script>
+          let homeID = document.getElementById("homeID")
+          let aboutID = document.getElementById("aboutID")
+          let trophyID = document.getElementById("trophyID")
+          let statsID = document.getElementById("statsID")
+            let current = 0;
+
+          aboutID.style.display = trophyID.style.display = statsID.style.display = "none"
+
+          setInterval(change, 3000)
+
+          function change() {
+              if(current == 0){
+                homeID.style.display = "block"
+                
+                aboutID.style.display = trophyID.style.display = statsID.style.display = "none"
+                current = 1
+            }
+              if(current == 1){
+                aboutID.style.display = "block"
+                
+                homeID.style.display = trophyID.style.display = statsID.style.display = "none"
+                current = 2
+            }
+            else if(current == 2){
+                trophyID.style.display = "block"
+                
+                homeID.style.display = aboutID.style.display = statsID.style.display = "none"
+                current = 3
+            }
+            else if(current == 3){
+                statsID.style.display = "block"
+                
+                homeID.style.display = aboutID.style.display = trophyID.style.display = "none"
+                current = 0
+            }
+        }
+      </script>
+</body>
+
+</html>

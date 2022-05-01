@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem 1</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        div{
+            position: relative;
+        }
+        
+        div button {
+            position: absolute;
+            margin: 0;
+            height: 54px;
+            width: 152px;
+        }
+        
+        div button:first-child {
+            border: 1px solid black;
+            background-color: rgba(255, 255, 255, 0);
+            font-size: 24px;
+            transition: 1s;
+            z-index: 9;
+        }
+        
+        div button:last-child {
+            background-color: rgb(255, 222, 75);
+            border: none;
+            transition: 1s;
+            transform: translateY(12px) translateX(12px);
+        }
+
+        div button:first-child:hover ~ button:last-child {
+            transform: translateY(0px) translateX(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button>Button 52</button>
+        <button></button>
+    </div>
+</body>
+
+</html>

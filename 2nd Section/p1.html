@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+        }
+
+        .main{
+            margin-top: 100px;
+            border-radius: 24px;
+            box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.263);
+            height: 350px;
+            width: 600px;
+            background-color: white;
+        }
+        
+        .top {
+            height: 262px;
+            
+        }
+        .bottom {
+            height: 20%;
+            /* z-index: 9; */
+        }
+        
+        .logo {
+            border-radius: 24px 24px 0 0;
+            background-color: rgb(203, 0, 173);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            color: white;
+            height: 262px;
+            transition: 1s;
+        }
+
+        @keyframes logoAnimation {
+            from{
+                /* transform: translate(0); */
+                height: 262px;
+            }
+            to{
+                /* transform: translateY(262px); */
+                height: 0px;
+            }
+        }
+        @keyframes textAnimation {
+            from{
+                transform: translate(25px);
+            }
+            to{
+                transform: translate(0);
+            }
+        }
+        @keyframes buyAnimation {
+            from{
+                transform: translate(0);
+            }
+            to{
+                transform: translate(-45px);
+            }
+        }
+        @keyframes checkAnimation {
+            from{
+                transform: translate(50px);
+            }
+            to{
+                transform: translate(0);
+            }
+        }
+        
+        .deatils {
+            display: none;
+            padding: 40px;
+            transition: 1s;
+        }
+        
+        .deatils div:first-child{
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 22px;
+        }
+        
+        .deatils div:last-child{
+            font-size: 20px;
+        }
+        
+        .deatils .link, .deatils div:last-child p{
+            color:gray
+        }
+        
+        .user-info{
+            padding: 12px 0;
+            font-size: 20px;
+        }
+
+        .user-info p{
+           padding: 2px 0;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+        }
+        
+        .info .left {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .info .left span:first-child {
+            font-size: 24px;
+        }
+        .info .left span:last-child {
+            font-size: 20px;
+            color: gray;
+        }
+
+        .first {
+            color: rgb(203, 0, 173);
+        }
+
+        .right button {
+            background-color: orange;
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: 1s;
+            border-radius: 2px;
+        }
+
+        .checkout {
+            display: none;
+            margin: 0 40px;
+            padding: 20px 0;
+            border-top: 2px solid rgb(203, 0, 173);
+            justify-content: space-between;
+        }
+
+        .checkout button {
+            background-color: rgb(57, 57, 255);
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: 1s;
+            border-radius: 2px;
+        }
+
+        input {
+            border: 1px solid gray;
+            font-size: 20px;
+            padding: 12px 24px;
+            transition: 0.5s;
+            border-radius: 2px;
+        }
+        input:focus {
+            outline: 0;
+            box-shadow: 0px 0px 10px blue;
+        }
+        .checkout button:focus {
+            outline: 0;
+            box-shadow: 0px 0px 10px blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="top">
+            <div id="main-logo" class="logo">Apple</div>
+            <div id="main-deatils" class="deatils">
+                <div>
+                    <p>Your order will be shipped to</p>
+                </div>
+
+                <div class="user-info">
+                    <p class="name">David Khourshid</p>
+                    <p class="link">www.github.com/davidkpiano</p>
+                    <p class="link">www.twitter.com/davidkpiano</p>
+                </div>
+
+                <div>
+                    <p>Available to ship: 1 businnes day</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div id="main-info" class="info">
+                <div class="left">
+                    <span class="first">Gift Card</span>
+                    <span class="last">$ 25.00</span>
+                </div>
+                <div class="right">
+                    <button class="buy" onclick="buy()">Buy</button>
+                </div>
+            </div>
+            <div id="main-checkout" class="checkout">
+                <input type="text" name="" placeholder="Enter a gift message" id="">
+                <button>Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let main_deatils = document.getElementById("main-deatils")
+        let main_logo = document.getElementById("main-logo")
+        let main_info = document.getElementById("main-info")
+        let main_checkout = document.getElementById("main-checkout")
+
+
+        function buy() {
+            console.log("hello");
+            main_logo.style.animationName = "logoAnimation";
+            main_deatils.style.animationName = "textAnimation";
+            main_info.style.animationName = "buyAnimation";
+            main_checkout.style.animationName = "checkAnimation";
+            main_logo.style.animationDuration = main_deatils.style.animationDuration = ".5s"
+            main_info.style.animationDuration = main_checkout.style.animationDuration = ".5s"
+            
+            setTimeout(() => {
+                main_logo.style.display = "none"
+                main_info.style.display = "none"
+                main_deatils.style.display = "block"
+                main_checkout.style.display = "flex"
+            }, 400)
+        }
+    </script>
+</body>
+
+</html>

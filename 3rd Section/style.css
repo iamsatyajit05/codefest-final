@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Water+Brush&display=swap');
+/* * {
+    font-family: 'Water Brush', cursive;
+    font-family: 'Montserrat', sans-serif;
+}  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    overflow-y: hidden;
+    background-color: black;
+}
+
+.home {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    margin: 105px;
+    width: 50%;
+}
+
+.text p {
+    font-size: 48px;
+    color: white;
+}
+
+.cursive {
+    font-family: 'Water Brush', cursive;
+    font-size: 164px;
+    color: blue;
+    line-height: 154px;
+}
+
+.text .aboutme {
+    margin-top: 18px;
+    font-size: 36px;
+}
+
+.img {
+    height: 100vh;
+    width: 50%;
+    background-image: url(img/home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutme-main{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(img/2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutme-main h2{
+    padding-top: 48px;
+    font-size: 128px;
+    text-align: center;
+}
+
+.aboutme-main .abouttext{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutme-main .abouttext p{
+    width: 80vw;
+    font-size: 40px;
+    padding: 24px;
+    margin: 12px 0;
+}
+
+.trophy{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(img/3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.trophy h2{
+    padding-top: 48px;
+    font-size: 128px;
+    text-align: center;
+}
+
+.trophy p{
+    font-size: 44px;
+    padding: 24px;
+}
+
+.trophy .champtext{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 48px;
+}
+.trophy .champtext div{
+    border-radius: 24px;
+}
+
+.stats{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(img/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stats h2{
+    padding-top: 48px;
+    font-size: 128px;
+    text-align: center;
+}
+.stats .statstext{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 48px;
+    padding: 24px;
+}
+.stats h3{
+    font-size: 72px;
+    text-align: center;
+}
+.stats p{
+    font-size: 48px;
+    padding: 24px;
+}
